@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "customer": 1,
+    "product": 1,
+    "quantity": 5,
+    "orderDate": "2023-05-20T07:31:15.000009+01:00[Europe/Warsaw]"
+  },
+  {
+    "id": 2,
+    "customer": 2,
+    "product": 2,
+    "quantity": 1,
+    "orderDate": "2023-02-22T12:00:15.000009+01:00[Europe/Warsaw]"
+  },
+  {
+    "id": 3,
+    "customer": 1,
+    "product": 3,
+    "quantity": 3,
+    "orderDate": "2023-02-22T21:53:15.000009+01:00[Europe/Warsaw]"
+  },
+  {
+    "id": 4,
+    "customer": 3,
+    "product": 4,
+    "quantity": 10,
+    "orderDate": "2023-05-20T04:31:15.000009+01:00[Europe/Warsaw]"
+  },
+  {
+    "id": 5,
+    "customer": 4,
+    "product": 5,
+    "quantity": 8,
+    "orderDate": "2023-02-22T14:12:15.000009+01:00[Europe/Warsaw]"
+  }
+]
