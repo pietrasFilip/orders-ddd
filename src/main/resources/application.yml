@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+tokens:
+  access:
+    expiration_time_ms: 300000
+  refresh:
+    expiration_time_ms: 300000
+    access_token_expiration_time_ms_property: 'access_token_expiration_time_ms_property'
+  prefix: 'Bearer '
+
+repository:
+  path:
+    json:
+      customers: 'data/customers.json'
+#      customers: 'src/main/resources/data/json/customers.json'
+      orders: 'data/orders.json'
+#      orders: 'src/main/resources/data/json/orders.json'
+      products: 'data/products.json'
+#      products: 'src/main/resources/data/json/products.json'
+    txt:
+      customers: 'data/customers.txt'
+#      customers: 'src/main/resources/data/txt/customers.txt'
+      orders: 'data/orders.txt'
+#      orders: 'src/main/resources/data/txt/orders.txt'
+      products: 'data/products.txt'
+#      products: 'src/main/resources/data/txt/products.txt'
+
+processor:
+  orders:
+    type: 'DB'
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url:
+    username:
+    password:
+  mail:
+    host:
+    username:
+    password:
+    port:
+    protocol:
+    properties:
+      mail.smtps.auth: true
+      mail.smtp.starttls.enable: true
