@@ -1,5 +1,6 @@
 package com.app.infrastructure.api.filter;
 
+import com.app.application.dto.error.AuthenticationErrorDto;
 import com.app.application.dto.token.AuthenticationDto;
 import com.app.application.service.token.TokensService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -58,6 +59,17 @@ public class AppAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         // pod aplikacje react
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.getWriter().write(new ObjectMapper().writeValueAsString(tokens));
+        response.getWriter().flush();
+        response.getWriter().close();
+    }
+
+    @Override
+    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
+        var ex = new AuthenticationErrorDto("Wrong username or password");
+
+        response.setStatus(401);
+        response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+        response.getWriter().write(new ObjectMapper().writeValueAsString(ex));
         response.getWriter().flush();
         response.getWriter().close();
     }
