@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 import static com.app.domain.product_management.model.product_category.Category.A;
 import static com.app.domain.product_management.model.product_category.Category.B;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
